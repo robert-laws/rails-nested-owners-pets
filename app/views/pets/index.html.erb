@@ -1,0 +1,13 @@
+<h1>All Pets Owned by <%= @owner.name %></h1>
+
+<%= render 'shared/flash_text' %>
+
+<ul>
+  <% @pets.each do |pet| %>
+    <li>
+      <%= link_to pet.name, owner_pet_path(pet.owner, pet) %>
+    </li>
+  <% end %>
+</ul>
+
+<%= render 'owners/owner_footer' %>

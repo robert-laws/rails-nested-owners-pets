@@ -1,0 +1,13 @@
+<h1>Pet Details</h1>
+
+<%= render 'shared/flash_text' %>
+
+<h4>
+  Name: <%= @pet.name %>
+</h4>
+
+<p>
+  Owner's Name: <%= link_to @pet.owner.name, owner_path(@pet.owner) %>
+</p>
+
+<%= render 'owners/owner_footer' %>
