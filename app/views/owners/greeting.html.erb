@@ -1,0 +1,17 @@
+<h1>Greeting</h1>
+
+<h2>
+  <% pet_app_welcome.each do |p| %>
+    <li>
+      <%= p %>
+    </li>
+  <% end %>
+</h2>
+
+<hr>
+
+<%= link_to 'Home Page', owners_path %>
+
+<br>
+
+<%= link_to 'Empty Greetings', empty_path %>

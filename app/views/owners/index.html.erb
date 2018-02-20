@@ -2,6 +2,8 @@
 
 <%= render 'shared/flash_text' %>
 
+<%= @user %>
+
 <ul>
   <% @owners.each do |owner| %>
     <li>
@@ -9,5 +11,10 @@
     </li>
   <% end %>
 </ul>
+
+<%= form_tag ({controller: 'owners', action: 'add', method: 'post'}) do %>
+  <input name='pet_message'><br>
+  <input type='submit' value='Add to Message'>
+<% end %>
 
 <%= render 'owners/owner_footer' %>
